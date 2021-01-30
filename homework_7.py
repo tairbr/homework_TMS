@@ -79,3 +79,25 @@ dict_1 = {1: ('дюйм', 'сантиметров'), 2: ('сантиметр', '
 dict_2 = {1: 'Дюймы в сантиметры', 2: 'Сантиметры в дюймы', 3: 'Мили в километры', 4: 'Километры в мили',
           5: 'Фунты в килограммы', 6: 'Килограммы в фунты', 7: 'Унции в граммы', 8: 'Граммы в унции',
           9: 'Галлон в литры', 10: 'Литры в галлоны', 11: 'Пинты в литры', 12: 'Литры в пинты'}
+
+while True:
+    number_func = int(input('- Выбери нужный вариант из списка для перевода или 0 для выхода.\n:'))
+    if number_func == 0:
+        break
+    elif number_func > 12:
+        print('- Выбери от 1 до 12 либо 0 для выхода\n')
+    else:
+        while True:
+            input_user = int(input(f'Переводим {dict_2[number_func]}.\nВвeди значение.\n:'))
+            if input_user == 0:
+                break
+            else:
+                dict_func = {1: inch(input_user), 2: centimeter(input_user), 3: mile(input_user), 4: km(input_user),
+                             5: lb(input_user), 6: kg(input_user), 7: ounce(input_user), 8: gram(input_user),
+                             9: gallon(input_user), 10: liters_gl(input_user), 11: pint(input_user),
+                             12: liters_pn(input_user)}
+
+                print(f'В {input_user} {dict_1[number_func][0]} - {dict_func[number_func]} {dict_1[number_func][1]}.')
+                print('- Для выхода выбери 0 или введи новое значение.')
+                print()
+
