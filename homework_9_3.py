@@ -8,7 +8,6 @@ from random import randint
 def list_change_decorator(func_decorator):
     def remove_even_numbers(arguments):
         func_decorator(list(filter(lambda x: x % 2 == 1, arguments)))
-
     return remove_even_numbers
 
 
