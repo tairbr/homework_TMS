@@ -10,6 +10,7 @@ print('Калькулятор может: +, -, *, /. Вводи выражен�
 while True:
     try:
         input_user = input(':')
+
         if input_user == 'учше':
             raise Layout_error
     except Layout_error as err:
@@ -36,8 +37,6 @@ while True:
             number_1 = float(input_user[0:index_mathematical_operator])  # определяем первое число
             number_2 = float(input_user[index_mathematical_operator + 1:])  # определяем второе число
 
-
-
             if data_list[index_mathematical_operator] == '+':
                 print(f'Результат: {addition(number_1, number_2)}')
             elif data_list[index_mathematical_operator] == '-':
@@ -50,61 +49,3 @@ while True:
             print(f'На 0 делить нельзя!!!')
         except ValueError as err:
             print(f'Только числа!!!')
-
-# a = int(input('a: '))
-# b = int(input('b: '))
-# try:
-# result = a / b
-# except ZeroDivisionError as err:
-# print(f'b is zero - {err}!!!')
-# except Exception as err:
-# print(f'SOMETHING WRONG - {err}!!!')
-# else:
-# print('Ошибки не было' )
-# finally:
-# print('Сработает всегда' )
-
-# class MyErr(Exception):
-#     def __init__(self, mess='Zero cost'):
-#         super().__init__(mess)
-#
-#
-# class Book:
-#     def __init__(self, pages, year, author, cost):
-#         try:
-#             self.pages = pages
-#             self.year = year
-#             self.author = author
-#             self.cost = cost
-#             if type(pages) != int:
-#                 raise TypeError('Pages is not int')
-#             if type(year) != int:
-#                 raise TypeError('Year is not int')
-#             if type(author) != str:
-#                 raise TypeError('Author is not str')
-#             if type(cost) != int:
-#                 raise TypeError('Cost is not int')
-#             if year > 2021:
-#                 raise ValueError('Error year')
-#
-#             if cost == 0:
-#                 raise MyErr
-#
-#         except TypeError as te:
-#             print(te)
-#
-#         except ValueError as ve:
-#             print(ve)
-#
-#         except MyErr as err:
-#             print(f'cost is not valid - {err}')
-#         else:
-#             print('Data is correct')
-#
-#
-# a = Book('str', 2022, 'Author', 10)
-# b = Book(12, 'str', 'author', 10)
-# c = Book(12, 2000, 45, 10)
-# d = Book(12, 200, 'author', [])
-# e = Book(12, 3000, 'author', 10)
-# f = Book(12, 2000, 'author', 0)
