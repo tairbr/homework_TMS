@@ -1,0 +1,4 @@
+02/21/21 - 20:45:53 - Program launch - Dima Radchenko
+           20:45:53 - Working time - 1min - task name:Pomodoro
+           20:45:53 - Break length - 1min
+           20:45:53 - Working time - 1min - task name:Pomodoro
